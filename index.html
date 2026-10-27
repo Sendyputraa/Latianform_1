@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Login</title>
+
+    <!-- INTERNAL CSS -->
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: white;
+            min-height: 100vh;
+        }
+
+        /* Kotak Login */
+        .login-container {
+            width: 350px;
+            max-width: 90%;
+            margin: 100px auto;
+            padding: 35px;
+            background-color: #c8b5f2;
+            border-radius: 35px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Judul */
+        h2 {
+            color: #171717;
+            font-size: 20px;
+            margin-bottom: 22px;
+        }
+
+        /* Label */
+        label {
+            display: block;
+            font-size: 13px;
+            margin-bottom: 8px;
+            color: #171717;
+        }
+
+        /* Input Username dan Password */
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 18px;
+            background-color: white;
+            border: 1px solid #cccccc;
+            border-radius: 0;
+            font-size: 13px;
+        }
+
+        /* Efek Input */
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #7655a8;
+        }
+
+        /* Checkbox */
+        .remember {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+
+        .remember input {
+            margin: 0;
+        }
+
+        .remember label {
+            margin: 0;
+            font-size: 13px;
+        }
+
+        /* Tombol Login */
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #252525;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        /* Efek Hover */
+        button[type="submit"]:hover {
+            background-color: #444444;
+        }
+
+        /* Forgot Password */
+        .forgot {
+            text-align: center;
+            margin-top: 18px;
+            font-size: 13px;
+        }
+
+        /* SignUp */
+        .signup {
+            text-align: center;
+            margin-top: 18px;
+            font-size: 13px;
+        }
+
+        /* Link */
+        a {
+            color: #333333;
+            text-decoration: underline;
+        }
+
+        /* Responsif HP */
+        @media (max-width: 600px) {
+            .login-container {
+                width: 90%;
+                margin: 50px auto;
+                padding: 30px;
+            }
+
+            input[type="text"],
+            input[type="password"],
+            button[type="submit"] {
+                font-size: 16px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <h2>Please Login in Here!</h2>
+
+        <form>
+
+            <label for="username">Username</label>
+            <input
+                type="text"
+                id="username"
+                placeholder="Username"
+                required
+            >
+
+            <label for="password">Password :</label>
+            <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                required
+            >
+
+            <div class="remember">
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember me</label>
+            </div>
+
+            <button type="submit">Login</button>
+
+            <p class="forgot">
+                <a href="#">Forgot Password ?</a>
+            </p>
+
+            <p class="signup">
+                Not a member?
+                <a href="#">SignUp now.</a>
+            </p>
+
+        </form>
+
+    </div>
+
+</body>
+  </html>
